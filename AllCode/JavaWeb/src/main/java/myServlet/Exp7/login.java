@@ -37,10 +37,10 @@ public class login extends HttpServlet {
 
             // 判断是否登录成功
             if (isLogined) {
-                out.print("<h1>登录成功！</h1>");
+                out.print("<h1>欢迎！</h1>");
                 out.print("<p>姓名：" + customer.getPassword() + "</p>");
             } else {
-                out.print("<h1>登录失败！</h1>");
+                out.print("<h1>账号或密码错误！</h1>");
             }
         } catch (SQLException e) {
 

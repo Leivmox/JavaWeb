@@ -35,7 +35,12 @@ public class query extends HttpServlet {
         try {
             students = dao.query(student2);
 
-
+            out.print("<table border='1' >");
+            out.print("<tr>");
+            out.print("<td>ID</td>");
+            out.print("<td>姓名</td>");
+            out.print("<td>年龄</td>");
+            out.print("</tr>");
             // 遍历查询结果
             for (Student2 student1 : students) {
                 out.print("<tr>");
@@ -44,6 +49,7 @@ public class query extends HttpServlet {
                 out.print("<td>" + student1.getAge() + "</td>");
                 out.print("</tr>");
             }
+            out.print("</table>");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
