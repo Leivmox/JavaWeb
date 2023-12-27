@@ -1,5 +1,4 @@
 <%--
-<%--
   Created by IntelliJ IDEA.
   User: wujun
   Date: 2023/10/15
@@ -7,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page import="conn.Dao" %>
+<%@ page import="conn.Dao2" %>
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.ResultSet" %>
@@ -20,11 +20,11 @@
 
 <%--  下面嵌入Java代码--%>
 <%
-  Dao dao = new Dao();//创建Dao对象
+  Dao2 dao = new Dao2();//创建Dao对象
   Connection con = dao.connection();//获得连接对象
   String tableName = "test";//数据库中的一个表的表名
   if (con != null)
-    System.out.println("数据库连接成功！");
+    System.out.println("数据库连接成功！123");
   else
     System.out.println("数据库连接失败");
   try {
